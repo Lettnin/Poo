@@ -5,8 +5,14 @@ public class Contador {
   private int limite;
 
   public Contador(int limite){
+    // this.limite = limite;
+    // this.valor = 0;
+    this(0, limite);
+  }
+
+  public Contador(int valor, int limite){
     this.limite = limite;
-    this.valor = 0;
+    alterarValor(valor);
   }
 
   public void incrementar(){
@@ -23,4 +29,11 @@ public class Contador {
   public String devolveString(){
     return(valor < 10) ? "0" + valor : "" + valor;
   }
+
+  public void alterarValor(int valor){
+    if(valor >= 0 && valor < limite){
+      this.valor = valor;
+    }
+  }
+
 }

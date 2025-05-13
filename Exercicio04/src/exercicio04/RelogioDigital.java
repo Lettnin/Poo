@@ -9,6 +9,11 @@ public class RelogioDigital {
     horas = new Contador(24);
   }
 
+  public RelogioDigital(int hora, int minuto){
+    minutos = new Contador(minuto, 60);
+    horas = new Contador(hora, 24);
+  }
+
   public void atualizaVisor(){
     System.out.println(horas.devolveString() + ":" + minutos.devolveString());
   }
@@ -18,5 +23,13 @@ public class RelogioDigital {
     if(minutos.devolverValor() == 0){
       horas.incrementar();
     }
+  }
+
+  public void alterarHora(int hora){
+    horas.alterarValor(hora);
+  }
+
+  public void alterarMinuto(int minuto){
+    minutos.alterarValor(minuto);
   }
 }
