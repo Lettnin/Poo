@@ -1,3 +1,4 @@
+import sistemabanco.Conta;
 
 public class Conta {
   // Atributos
